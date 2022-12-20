@@ -65,9 +65,11 @@ export class AppComponent implements AfterViewInit {
       0.1,
       1000
     );
-    camera.position.z = 350;
+    const cameraZ = 350;
+    const cameraY = 300;
+    camera.position.z = cameraZ;
     camera.position.x = 0;
-    camera.position.y = 300;
+    camera.position.y = cameraY;
     const rotateY = new Matrix4().makeRotationY(0.003);
 
     camera.lookAt(
@@ -79,7 +81,7 @@ export class AppComponent implements AfterViewInit {
 
     const width = 700;
     const height = 700;
-    const step = 10;
+    const step = 7;
 
     let arr: Mesh[][] = new Array(width / step);
 
