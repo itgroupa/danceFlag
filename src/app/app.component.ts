@@ -168,8 +168,8 @@ export class AppComponent implements AfterViewInit {
           const trueY = fixX * fixY * musicScale;
 
           const scale =
-            (1 - (heightWave - trueY * 0.6) / (heightWave * 2)) *
-            (musicScale < 0.3 ? 0.3 : musicScale > 1 ? 1 : musicScale);
+            ((trueY * 0.2 - -1 * heightWave) / (heightWave * 2)) *
+            (musicScale < 0.5 ? 0.5 : musicScale > 1 ? 1 : musicScale);
 
           arr[x][y].position.y = trueY;
           arr[x][y].scale.set(scale, scale, scale);
